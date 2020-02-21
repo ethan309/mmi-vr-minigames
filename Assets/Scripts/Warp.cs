@@ -12,7 +12,7 @@ public class Warp : MonoBehaviour
 
     void Start()
     {
-        BASE = minigames[0];
+        BASE = SceneManager.GetActiveScene().name;
         focus = BASE;
     }
     
