@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TelescopeComponent : MonoBehaviour, Resetable
+
+namespace Valve.VR.InteractionSystem.Sample
+{
+    public class TelescopeComponent : MonoBehaviour, Resetable
     {
         private bool shouldReset;
         private GameObject centerpoint;
@@ -106,3 +109,4 @@ public class TelescopeComponent : MonoBehaviour, Resetable
             }
         }
     }
+}

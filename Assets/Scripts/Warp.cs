@@ -1,20 +1,42 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using Valve.VR;
 
 public class Warp : MonoBehaviour
 {
     string[] minigames = {"Observatory", "Stardust", "Copycat"};
-    const string BASE = minigames[0];
-    string focus = BASE;
+    string BASE;
+    string focus;
 
-    // Update is called once per frame
+    void Start()
+    {
+        BASE = minigames[0];
+        focus = BASE;
+    }
+    
+    // Warp to minigame (new scene). 'W' key used for manual debugging.
     void Update()
     {
-        if(focus != BASE)
+        if(Input.GetKeyUp(KeyCode.W))
         {
-            print("Loading scene: " + focus);
-            SceneManager.LoadScene(focus);
+            if(focus != null && focus != BASE)
+            {
+                // minigame selected.
+                print("Loading scene: " + focus);
+                Valve.VR.SteamVR_LoadLevel.Begin(focus);
+            }
+            else if(focus == BASE)
+            {
+                // return to observatory.
+                print("Exiting telescope view.");
+            }
+            else
+            {
+                // Play error sound, etc.
+                print("Invalid telescope selction.");
+            }
         }
     }
 }
