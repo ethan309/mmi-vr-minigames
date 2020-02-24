@@ -12,10 +12,9 @@ GameObject:
   - component: {fileID: 8473760715303528027}
   - component: {fileID: 6055516213824748495}
   - component: {fileID: 850098077635389934}
-  - component: {fileID: 9174822365617396215}
   m_Layer: 0
-  m_Name: Telescope Component
-  m_TagString: Untagged
+  m_Name: Telescope Guide
+  m_TagString: Guide
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: e8d4563164dd941baac7279fd9cd0fee, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -94,16 +93,3 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &9174822365617396215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4119975252142308684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e29738acb80234af1ab357356d6d3fbc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  snapTime: 2
