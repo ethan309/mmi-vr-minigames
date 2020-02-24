@@ -7,11 +7,12 @@ using Valve.VR.InteractionSystem;
 public class ZoomCrank : MonoBehaviour
 {
 
-    public GameObject targetCamera;
+    public Camera targetCamera;
     public GameObject targetCrank;
     private int axisOfRotation;
-    public float rotation;
-    public int cycles;
+    private float maxRotation;
+    private float rotation;
+    private int cycles;
     private float oldRotation;
 
     // Start is called before the first frame update
@@ -21,6 +22,7 @@ public class ZoomCrank : MonoBehaviour
         axisOfRotation = (int) circularDrive.axisOfRotation;
         rotation = targetCrank.transform.rotation.eulerAngles[axisOfRotation];
         cycles = 0;
+        maxRotation = circularDrive.maxAngle - circularDrive.minAngle;
     }
 
     // Update is called once per frame
@@ -30,7 +32,7 @@ public class ZoomCrank : MonoBehaviour
         rotation = targetCrank.transform.rotation.eulerAngles[axisOfRotation];
         CheckCycleIncrement();
         CheckCycleDecrement();
-
+        ZoomCamera();
     }
 
     void CheckCycleIncrement() {
@@ -46,6 +48,8 @@ public class ZoomCrank : MonoBehaviour
     }
 
     void ZoomCamera() {
-
+        float calculatedRotation = (cycles * 360) + rotation;
+        float calculatedFOV = ((-19 * calculatedRotation ) / (maxRotation / 3)) + 60;
+        targetCamera.fieldOfView = calculatedFOV;
     }
 }
