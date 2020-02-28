@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TelescopeComponent : MonoBehaviour
+public class TelescopeComponent : MonoBehaviour, Guideable
 {
     public string opaqueMaterialName;
     public string transparentMaterialName;
@@ -12,14 +12,6 @@ public class TelescopeComponent : MonoBehaviour
     {
         PlaceTransparent();
     }
-
-    void Update()
-    {
-        if (Input.GetKeyUp(KeyCode.R))
-        {
-            PlaceOpaque();
-        }
-    } 
 
     public void PlaceOpaque() {
         Material newMat = Resources.Load("Materials/" + opaqueMaterialName, typeof(Material)) as Material;
