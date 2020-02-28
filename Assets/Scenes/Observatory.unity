@@ -139,8 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8233135e751c4a0aa50e296aa45536c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opaqueMaterialName: telescopeBuff
-  transparentMaterialName: blank
+  transparency: 0.5
 --- !u!1 &69766477
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,6 +376,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 249540710}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &249540712 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6572877580746720601, guid: 7b28f4b4420914a6dbc5e93dfd9c1164,
+    type: 3}
+  m_PrefabInstance: {fileID: 249540710}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &249540713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249540712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54ab11c2ae966654899e6f83eef5d13e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &261855734 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6164566716457838015, guid: d50433362e02340a2be87107f5613708,
@@ -395,8 +412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8233135e751c4a0aa50e296aa45536c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opaqueMaterialName: telescopeBuff
-  transparentMaterialName: blank
+  transparency: 0.5
 --- !u!1 &352497167 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2994569234417419163, guid: 9ac71c26a46be438fbf6051a8d00ba53,
@@ -415,8 +431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8233135e751c4a0aa50e296aa45536c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opaqueMaterialName: telescopeBuff
-  transparentMaterialName: blank
+  transparency: 0.5
 --- !u!1 &412977436 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7555709344509756922, guid: 9ac71c26a46be438fbf6051a8d00ba53,
@@ -435,8 +450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8233135e751c4a0aa50e296aa45536c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opaqueMaterialName: telescopeBuff
-  transparentMaterialName: blank
+  transparency: 0.5
 --- !u!1 &603478686 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3335975045913516189, guid: 7b28f4b4420914a6dbc5e93dfd9c1164,
@@ -455,8 +469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8233135e751c4a0aa50e296aa45536c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opaqueMaterialName: telescopeBuff
-  transparentMaterialName: blank
+  transparency: 0.5
 --- !u!1001 &606631730
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1060,6 +1073,24 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &918318880 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3745644712084677139, guid: d50433362e02340a2be87107f5613708,
+    type: 3}
+  m_PrefabInstance: {fileID: 918318876}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &918318881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918318880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54ab11c2ae966654899e6f83eef5d13e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1183172876
 GameObject:
   m_ObjectHideFlags: 0
@@ -1356,6 +1387,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1357709335}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1357709337 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 984439873100817543, guid: 9ac71c26a46be438fbf6051a8d00ba53,
+    type: 3}
+  m_PrefabInstance: {fileID: 1357709335}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1357709338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357709337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54ab11c2ae966654899e6f83eef5d13e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1361121349 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8186152018264188291, guid: 9ac71c26a46be438fbf6051a8d00ba53,
@@ -1374,8 +1423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8233135e751c4a0aa50e296aa45536c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opaqueMaterialName: telescopeBuff
-  transparentMaterialName: blank
+  transparency: 0.5
 --- !u!1 &1435374425 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4473984409997532297, guid: d50433362e02340a2be87107f5613708,
@@ -1394,8 +1442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8233135e751c4a0aa50e296aa45536c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opaqueMaterialName: telescopeBuff
-  transparentMaterialName: blank
+  transparency: 0.5
 --- !u!1001 &1529014241
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1541,8 +1588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8233135e751c4a0aa50e296aa45536c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opaqueMaterialName: 
-  transparentMaterialName: 
+  transparency: 0.5
 --- !u!114 &1529014247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1555,8 +1601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8233135e751c4a0aa50e296aa45536c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opaqueMaterialName: 
-  transparentMaterialName: 
+  transparency: 0.5
 --- !u!1 &1658395461 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1680504236692840543, guid: 7b28f4b4420914a6dbc5e93dfd9c1164,
@@ -1575,8 +1620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8233135e751c4a0aa50e296aa45536c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opaqueMaterialName: tele
-  transparentMaterialName: blank
+  transparency: 0.5
 --- !u!1 &1738861881 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8052994932809076077, guid: d50433362e02340a2be87107f5613708,
@@ -1595,8 +1639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8233135e751c4a0aa50e296aa45536c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opaqueMaterialName: telescopeBuff
-  transparentMaterialName: blank
+  transparency: 0.5
 --- !u!1 &1789183719 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5696618982783577219, guid: 9ac71c26a46be438fbf6051a8d00ba53,
@@ -1615,8 +1658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8233135e751c4a0aa50e296aa45536c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opaqueMaterialName: telescopeBuff
-  transparentMaterialName: blank
+  transparency: 0.5
 --- !u!1 &1827706480 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6520957560641263882, guid: d50433362e02340a2be87107f5613708,
@@ -1635,8 +1677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8233135e751c4a0aa50e296aa45536c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opaqueMaterialName: telescopeBuff
-  transparentMaterialName: blank
+  transparency: 0.5
 --- !u!1 &1828351478
 GameObject:
   m_ObjectHideFlags: 0
@@ -1764,8 +1805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8233135e751c4a0aa50e296aa45536c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opaqueMaterialName: tele
-  transparentMaterialName: blank
+  transparency: 0.5
 --- !u!1 &1899837253 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6952355484723883717, guid: 7b28f4b4420914a6dbc5e93dfd9c1164,
@@ -1784,8 +1824,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8233135e751c4a0aa50e296aa45536c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opaqueMaterialName: telescopeBuff
-  transparentMaterialName: blank
+  transparency: 0.5
 --- !u!1 &1982503330
 GameObject:
   m_ObjectHideFlags: 0
@@ -1887,8 +1926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8233135e751c4a0aa50e296aa45536c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opaqueMaterialName: telescopeBuff
-  transparentMaterialName: blank
+  transparency: 0.5
 --- !u!1 &2062396118 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4417518975713632819, guid: 9ac71c26a46be438fbf6051a8d00ba53,
@@ -1907,8 +1945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8233135e751c4a0aa50e296aa45536c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opaqueMaterialName: telescopeBuff
-  transparentMaterialName: blank
+  transparency: 0.5
 --- !u!1 &2121863012 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8588338584874314335, guid: 9ac71c26a46be438fbf6051a8d00ba53,
@@ -1927,5 +1964,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8233135e751c4a0aa50e296aa45536c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opaqueMaterialName: telescopeBuff
-  transparentMaterialName: blank
+  transparency: 0.5

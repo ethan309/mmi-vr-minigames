@@ -12,7 +12,7 @@ public class TelescopeComponentParent : MonoBehaviour
             // When the component is 'placed', it should be destroyed and should change the color of the telescope itself to opaque
             Destroy(gameObject);
             foreach (Transform child in transform) {
-                child.PlaceOpaque();
+                child.GetComponent<Guideable>().PlaceOpaque();
             }
         }
     }
@@ -20,11 +20,11 @@ public class TelescopeComponentParent : MonoBehaviour
     void Update()
     {
         // The collision object is what the Component collides with
-        if (input.GetKeyUp(KeyCode.R))
+        if (Input.GetKeyUp(KeyCode.R))
         {
             // When the component is 'placed', it should be destroyed and should change the color of the telescope itself to opaque
             foreach (Transform child in transform) {
-                child.PlaceOpaque();
+                child.GetComponent<Guideable>().PlaceOpaque();
             }
         }
     }
