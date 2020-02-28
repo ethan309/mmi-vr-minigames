@@ -4,32 +4,32 @@ using UnityEngine;
 
 public class TelescopeComponent : MonoBehaviour
 {
-    public float transparency = 0.5f;
+    public string opaqueMaterialName;
+    public string transparentMaterialName;
 
     // Start is called before the first frame update
     void Start()
     {
-        Renderer renderer = gameObject.GetComponent<Renderer>();
-        Color materialColor = renderer.material.color;
-        renderer.material.color = new Color(materialColor.r, materialColor.g, materialColor.b, transparency);
+        PlaceTransparent();
     }
 
-    void OnCollisionEnter(Collision collision)
+    void Update()
     {
-        
-        // The collision object is what the Component collides with
-        if (collision.gameObject.CompareTag("Guide"))
+        if (Input.GetKeyUp(KeyCode.R))
         {
-            // When the component is 'placed', it should be destroyed and should change the color of the telescope itself to opaque
-            Destroy(gameObject);
-            ChangeTransparency(1.0f, collision.gameObject);
+            PlaceOpaque();
         }
+    } 
+
+    public void PlaceOpaque() {
+        Material newMat = Resources.Load("Materials/" + opaqueMaterialName, typeof(Material)) as Material;
+        Renderer renderer = gameObject.GetComponent<Renderer>();
+        renderer.material = newMat;
     }
 
-    void ChangeTransparency(float newTransparency, GameObject obj)
-    {
-        Renderer renderer = obj.GetComponent<Renderer>();
-        Color materialColor = GetComponent<Renderer>().material.color;
-        renderer.material.color = new Color(materialColor.r, materialColor.g, materialColor.b, newTransparency);
+    public void PlaceTransparent() {
+        Material newMat = Resources.Load("Materials/" + transparentMaterialName, typeof(Material)) as Material;
+        Renderer renderer = gameObject.GetComponent<Renderer>();
+        renderer.material = newMat;
     }
 }
