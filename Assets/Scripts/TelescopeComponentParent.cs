@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class TelescopeComponentParent : MonoBehaviour
 {
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
         // The collision object is what the Component collides with
-        if (collision.gameObject.CompareTag("Telescope Pickup Component"))
+        if (other.gameObject.CompareTag("Telescope Pickup Component"))
         {
             // When the component is 'placed', it should be destroyed and should change the color of the telescope itself to opaque
-            Destroy(gameObject);
+            Destroy(other.gameObject);
             foreach (Transform child in transform) {
                 child.GetComponent<Guideable>().PlaceOpaque();
             }
