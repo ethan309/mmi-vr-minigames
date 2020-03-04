@@ -6,14 +6,14 @@ public class Telescope : MonoBehaviour
 {
     public bool lensPlaced;
     public bool bodyPlaced;
-    public bool scopePlaced;
+    public bool eyePiecePlaced;
     public GameObject lens;
 
     void Start()
     {
         lensPlaced = false;
         bodyPlaced = false;
-        scopePlaced = false;
+        eyePiecePlaced = false;
     }
 
     // Update is called once per frame
@@ -27,25 +27,17 @@ public class Telescope : MonoBehaviour
             if (piece != null)
             {
                 // TODO: make piece names uniform with boolean names
-                if (component.ToString() == "piece1 (UnityEngine.GameObject)") {
-                    scopePlaced = piece.placed;
-                } else if (component.ToString() == "piece2 (UnityEngine.GameObject)") {
+                if (component.ToString() == "Eye Piece (UnityEngine.GameObject)") {
+                    eyePiecePlaced = piece.placed;
+                } else if (component.ToString() == "Body (UnityEngine.GameObject)") {
                     bodyPlaced = piece.placed;
-                } else if (component.ToString() == "piece3 (UnityEngine.GameObject)") {
+                } else if (component.ToString() == "Lens (UnityEngine.GameObject)") {
                     lensPlaced = piece.placed;
                 }
 
-                if (lensPlaced && bodyPlaced && scopePlaced) {
+                if (lensPlaced && bodyPlaced && eyePiecePlaced) {
                     lens.transform.gameObject.SetActive(true);
                 }
-                // if (piece.placed) {
-                //     placed += 1;
-
-                // }
-
-                // if (piece.placed) {
-                //     lens.transform.gameObject.SetActive(true);
-                // }
             }
         }
     }
