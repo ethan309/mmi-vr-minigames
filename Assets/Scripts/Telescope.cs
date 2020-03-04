@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class Telescope : MonoBehaviour
 {
-    public int placed = 0;
+    public bool lensPlaced;
+    public bool bodyPlaced;
+    public bool scopePlaced;
     public GameObject lens;
 
-    
-    // Start is called before the first frame update
     void Start()
     {
-        
+        lensPlaced = false;
+        bodyPlaced = false;
+        scopePlaced = false;
     }
 
     // Update is called once per frame
@@ -19,12 +21,31 @@ public class Telescope : MonoBehaviour
     {
         foreach (Transform child in transform) 
         {
-            if (child.getChild(0).placed) {
-                placed += 1;
-            }
+            Transform childTransform = child.GetChild(0);
+            GameObject component = childTransform.gameObject;
+            TelescopeComponentParent piece = component.GetComponent<TelescopeComponentParent>();
+            if (piece != null)
+            {
+                // TODO: make piece names uniform with boolean names
+                if (component.ToString() == "piece1 (UnityEngine.GameObject)") {
+                    scopePlaced = piece.placed;
+                } else if (component.ToString() == "piece2 (UnityEngine.GameObject)") {
+                    bodyPlaced = piece.placed;
+                } else if (component.ToString() == "piece3 (UnityEngine.GameObject)") {
+                    lensPlaced = piece.placed;
+                }
 
-            if (placed >= 3) {
-                lens.transform.gameObject.SetActive(true);
+                if (lensPlaced && bodyPlaced && scopePlaced) {
+                    lens.transform.gameObject.SetActive(true);
+                }
+                // if (piece.placed) {
+                //     placed += 1;
+
+                // }
+
+                // if (piece.placed) {
+                //     lens.transform.gameObject.SetActive(true);
+                // }
             }
         }
     }
