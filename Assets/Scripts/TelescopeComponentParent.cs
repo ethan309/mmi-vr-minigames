@@ -5,11 +5,14 @@ using UnityEngine;
 public class TelescopeComponentParent : MonoBehaviour
 {
     public bool placed = false;
+    public string tag;
 
     void OnTriggerEnter(Collider other)
     {
         // The collision object is what the Component collides with
-        if (other.gameObject.CompareTag("Telescope Pickup Component"))
+        // Need three different pairs of collision detectors to match each real piece to its frame
+
+        if (other.gameObject.CompareTag(tag))
         {
             placed = true;
             // When the component is 'placed', it should be destroyed and should change the color of the telescope itself to opaque

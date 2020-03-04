@@ -7,6 +7,14 @@ TagManager:
   - Guide
   - Telescope Guide Component
   - Telescope Pickup Component
+  - projectile
+  - FxTemporaire
+  - Eye Piece Frame
+  - Eye Piece
+  - Body Frame
+  - Body
+  - Lens Frame
+  - Lens
   layers:
   - Default
   - TransparentFX
