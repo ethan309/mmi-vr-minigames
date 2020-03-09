@@ -21,7 +21,7 @@ public class HUDController : MonoBehaviour
 
     private void OnTimedEvent(System.Object source, ElapsedEventArgs e)
     {
-        HUDCenterText.text = "";
+        HUDCenterText.text = "Go!";
     }
 
 
