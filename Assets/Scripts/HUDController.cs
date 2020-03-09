@@ -10,27 +10,42 @@ using TMPro;
 public class HUDController : MonoBehaviour
 {
     private System.Timers.Timer startTimer;
+
+    public TextMeshProUGUI HUDLeftText;
     public TextMeshProUGUI HUDCenterText;
+    public TextMeshProUGUI HUDRightText;
+    public TextMeshProUGUI HUDBottomText;
 
     // Start is called before the first frame update
     void Start()
     {
-        HUDCenterText.text = "Instructions here.";
-        StartTimer(5000);
+        PopulateHUDText("", "Start by constructing your telescope.", "", "You will use your telescope to find other worlds.");
+        StartTimer(5000, ClearHUDText);
     }
 
-    private void OnTimedEvent(System.Object source, ElapsedEventArgs e)
+    private void PopulateHUDText(String left, String center, String right, String bottom)
     {
-        HUDCenterText.text = "Go!";
+        HUDLeftText.text = left;
+        HUDCenterText.text = center;
+        HUDRightText.text = right;
+        HUDBottomText.text = bottom;
+    }
+
+    private void ClearHUDText(System.Object source, ElapsedEventArgs e)
+    {
+        HUDLeftText.text = "";
+        HUDCenterText.text = "";
+        HUDRightText.text = "";
+        HUDBottomText.text = "";
     }
 
 
-    private void StartTimer(int time)
+    private void StartTimer(int time, ElapsedEventHandler callback)
     {
         // Create a timer with a two second interval.
         startTimer = new System.Timers.Timer(time);
         // Hook up the Elapsed event for the timer. 
-        startTimer.Elapsed += OnTimedEvent;
+        startTimer.Elapsed += callback; //OnTimedEvent;
         startTimer.AutoReset = false;
         startTimer.Enabled = true;
     }
