@@ -19,12 +19,14 @@ public class HUDController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        print("GO");
         PopulateHUDText("", "Start by constructing your telescope.", "", "You will use your telescope to find other worlds.");
         StartTimer(5000, ClearHUDText);
     }
 
     private void PopulateHUDText(String left, String center, String right, String bottom)
     {
+        print("HUD");
         HUDLeftText.text = left;
         HUDCenterText.text = center;
         HUDRightText.text = right;
