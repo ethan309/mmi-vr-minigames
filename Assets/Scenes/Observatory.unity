@@ -175,9 +175,9 @@ Transform:
   m_LocalPosition: {x: 0.049504593, y: 0.37, z: 2.4332998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1939604524}
   - {fileID: 29510523}
   - {fileID: 315380304}
+  - {fileID: 1357127863}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -536,7 +536,7 @@ PrefabInstance:
     - target: {fileID: 1088504910286828141, guid: d4062a7e170494b40a8d0c67a795d67f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1088504910286828141, guid: d4062a7e170494b40a8d0c67a795d67f,
         type: 3}
@@ -558,11 +558,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rotate Crank Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 5657820817166415824, guid: d4062a7e170494b40a8d0c67a795d67f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.117
+      objectReference: {fileID: 0}
+    - target: {fileID: 5657820817166415824, guid: d4062a7e170494b40a8d0c67a795d67f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.033
+      objectReference: {fileID: 0}
     - target: {fileID: 5657820819070719035, guid: d4062a7e170494b40a8d0c67a795d67f,
         type: 3}
       propertyPath: targetRotatable
       value: 
-      objectReference: {fileID: 1939604523}
+      objectReference: {fileID: 1357127862}
+    - target: {fileID: 5657820819070719035, guid: d4062a7e170494b40a8d0c67a795d67f,
+        type: 3}
+      propertyPath: rotationScale
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4062a7e170494b40a8d0c67a795d67f, type: 3}
 --- !u!4 &315380304 stripped
@@ -1449,7 +1464,7 @@ PrefabInstance:
     - target: {fileID: 3907453099290522606, guid: 32a14149e57d246c3befb0cbb905c7da,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3907453099290522606, guid: 32a14149e57d246c3befb0cbb905c7da,
         type: 3}
@@ -1549,12 +1564,12 @@ PrefabInstance:
     - target: {fileID: 8450876600287764395, guid: 32a14149e57d246c3befb0cbb905c7da,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.396
+      value: -0.337
       objectReference: {fileID: 0}
     - target: {fileID: 8450876600287764395, guid: 32a14149e57d246c3befb0cbb905c7da,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.055
+      value: -1.055
       objectReference: {fileID: 0}
     - target: {fileID: 8450876600349551450, guid: 32a14149e57d246c3befb0cbb905c7da,
         type: 3}
@@ -2342,6 +2357,37 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: c876a3ab11aca4dbd9c692c14472b1ad, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d50433362e02340a2be87107f5613708, type: 3}
+--- !u!1 &1357127862
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1357127863}
+  m_Layer: 0
+  m_Name: Telescope Frame
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1357127863
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357127862}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.052, y: 0.22071254, z: -2.4807}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1939604524}
+  m_Father: {fileID: 69766478}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1357709335
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4132,14 +4178,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1939604523}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.34602934, y: -0.33888304, z: -0.96283126}
+  m_LocalPosition: {x: -0.39802933, y: -0.5595956, z: 1.5178688}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1357709336}
   - {fileID: 918318877}
   - {fileID: 249540711}
   - {fileID: 606631731}
-  m_Father: {fileID: 69766478}
+  m_Father: {fileID: 1357127863}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2048194499 stripped
