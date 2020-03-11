@@ -4,16 +4,23 @@ using UnityEngine;
 
 public class DynamicallyResizable : MonoBehaviour
 {
+    public int manualScalingFactor = 1;
+    private int previousManualScalingFactor;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        previousManualScalingFactor = manualScalingFactor;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(manualScalingFactor != previousManualScalingFactor)
+        {
+            previousManualScalingFactor = manualScalingFactor;
+            ScaleSize(manualScalingFactor);
+        }
     }
 
     void UpdateSize(int xScaling, int yScaling, int zScaling) {
