@@ -23,12 +23,14 @@ public class DynamicallyResizable : MonoBehaviour
         }
     }
 
-    void UpdateSize(int xScaling, int yScaling, int zScaling) {
+    void UpdateSize(int xScaling, int yScaling, int zScaling)
+    {
         Vector3 old = gameObject.transform.localScale;
         gameObject.transform.localScale = new Vector3(old.x * xScaling, old.y * yScaling, old.z * zScaling);
     }
 
-    void ScaleSize(int scalingFactor) {
+    void ScaleSize(int scalingFactor)
+    {
         UpdateSize(scalingFactor, scalingFactor, scalingFactor);
     }
 }
