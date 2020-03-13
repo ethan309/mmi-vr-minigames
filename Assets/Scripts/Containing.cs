@@ -4,7 +4,7 @@ using UnityEngine;
 
 public interface Containing
 {
-    int glowIntensity
+    float glowIntensity
     {
         get;
     }
@@ -13,7 +13,7 @@ public interface Containing
         get;
     }
 
-    public int stardustToCollect
+    int stardustToCollect
     {
         get;
     }

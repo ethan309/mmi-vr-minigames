@@ -25,11 +25,15 @@ public class StardustContainer : MonoBehaviour, Containing
         }
     }
 
-    public int glowIntensity
+    public float glowIntensity
     {
         get
         {
-            return stardust;
+            if(stardust <= 0)
+            {
+                return 0.1F;
+            }
+            return (stardust + 1) / TOTAL_STARDUST;
         }
     }
 
