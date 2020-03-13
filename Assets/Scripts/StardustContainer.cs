@@ -13,7 +13,7 @@ public class StardustContainer : MonoBehaviour, Containing
     {
         get
         {
-            return stardust + 1;
+            return (stardust + 1)/TOTAL_STARDUST;
         }
     }
 
