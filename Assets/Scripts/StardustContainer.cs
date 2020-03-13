@@ -9,19 +9,27 @@ public class StardustContainer : MonoBehaviour, Containing
 
     private int TOTAL_STARDUST;
 
-    public int glowIntensity
+    public int stardustToCollect
     {
         get
         {
-            return (stardust + 1)/TOTAL_STARDUST;
+            return TOTAL_STARDUST;
         }
     }
 
-    public bool allStardustCollected
+    public bool stardustCollected
     {
         get
         {
             return stardust == TOTAL_STARDUST;
+        }
+    }
+
+    public int glowIntensity
+    {
+        get
+        {
+            return stardust;
         }
     }
 

@@ -8,7 +8,12 @@ public interface Containing
     {
         get;
     }
-    bool allStardustCollected
+    bool stardustCollected
+    {
+        get;
+    }
+
+    public int stardustToCollect
     {
         get;
     }
