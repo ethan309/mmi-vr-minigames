@@ -6,7 +6,7 @@ public class Collectable : MonoBehaviour
 {
     public int collected;
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collision)
     {
         // Test Tube is a placeholder name, replace it with whatever the tube/vacuum/light in hand ends up being
         if (collision.gameObject.CompareTag("Test Tube"))
