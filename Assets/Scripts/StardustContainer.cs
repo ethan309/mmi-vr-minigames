@@ -5,8 +5,6 @@ using UnityEngine;
 [System.Serializable]
 public class StardustContainer : MonoBehaviour, Containing
 {
-    private int stardust;
-
     private int TOTAL_STARDUST;
 
     public int stardustToCollect
@@ -17,7 +15,22 @@ public class StardustContainer : MonoBehaviour, Containing
         }
     }
 
-    public int stardustCollected;
+    private int stardust;
+
+    public int stardustCollected
+    {
+        get
+        {
+            return stardust;
+        }
+        set
+        {
+            if(value >= 0)
+            {
+                stardust = value;
+            }
+        }
+    }
 
     public float glowIntensity
     {
