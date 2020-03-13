@@ -17,23 +17,17 @@ public class StardustContainer : MonoBehaviour, Containing
         }
     }
 
-    public int stardustCollected
-    {
-        get
-        {
-            return stardust;
-        }
-    }
+    public int stardustCollected;
 
     public float glowIntensity
     {
         get
         {
-            if(stardust <= 0)
+            if(stardustCollected <= 0)
             {
                 return 0.1F;
             }
-            return (stardust + 1) / TOTAL_STARDUST;
+            return (stardustCollected + 1) / TOTAL_STARDUST;
         }
     }
 
@@ -47,15 +41,10 @@ public class StardustContainer : MonoBehaviour, Containing
     // Update is called once per frame
     void OnTriggerEvent(Collider collision)
     {
-        if (collision.gameObject.CompareTag("Stardust"))
+        if(collision.gameObject.CompareTag("Stardust"))
         {
             Destroy(gameObject);
-            UpdateStardust(stardust + 1);
+            stardustCollected += 1;
         }
-    }
-
-    private void  UpdateStardust(int newStardustValue)
-    {
-        stardust = newStardustValue;
     }
 }
