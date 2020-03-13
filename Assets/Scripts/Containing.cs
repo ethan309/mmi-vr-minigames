@@ -8,7 +8,7 @@ public interface Containing
     {
         get;
     }
-    bool stardustCollected
+    int stardustCollected
     {
         get;
     }

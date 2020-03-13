@@ -17,11 +17,11 @@ public class StardustContainer : MonoBehaviour, Containing
         }
     }
 
-    public bool stardustCollected
+    public int stardustCollected
     {
         get
         {
-            return stardust == TOTAL_STARDUST;
+            return stardust;
         }
     }
 

@@ -9,6 +9,9 @@ using TMPro;
 
 public class HUDController : MonoBehaviour
 {
+
+    private GameObject container;
+    private int totalDust;
     private System.Timers.Timer startTimer;
 
     public TextMeshProUGUI HUDLeftText;
@@ -19,6 +22,8 @@ public class HUDController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        container = GameObject.FindGameObjectsWithTag("Test Tube")[0];
+        totalDust = (container.GetComponent<Containing>()).stardustToCollect;
         PopulateHUDText("", "Collect all the stardust.", "", "You can use this stardust to power your light.");
         StartTimer(5000, ClearHUDText);
     }
@@ -48,5 +53,12 @@ public class HUDController : MonoBehaviour
         startTimer.Elapsed += callback; //OnTimedEvent;
         startTimer.AutoReset = false;
         startTimer.Enabled = true;
+    }
+
+    void Update()
+    {
+        int collected = (container.GetComponent<Containing>()).stardustCollected;
+        String status = "Levels:\n" + collected + "/" + totalDust;
+        PopulateHUDText(status, "", "", "");
     }
 }
