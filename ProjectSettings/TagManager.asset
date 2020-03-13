@@ -15,6 +15,7 @@ TagManager:
   - Body
   - Lens Frame
   - Lens
+  - Test Tube
   layers:
   - Default
   - TransparentFX
