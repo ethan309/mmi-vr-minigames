@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/StardustCollection.unity
+    guid: 14612b230d7b3408196d64755ba71004
   m_configObjects: {}

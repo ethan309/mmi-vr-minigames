@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Scripts/DynamicallyResizable.cs.meta
 guid: f2d51fdb5b4af47de9644a8ac71498a7
+=======
+guid: 2d5f509a25983475abd8a2edb13f148d
+>>>>>>> origin/stardust:Assets/Scripts/TelescopeRaycast.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
