@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 [System.Serializable]
 public class StardustContainer : MonoBehaviour, Containing
@@ -17,31 +18,19 @@ public class StardustContainer : MonoBehaviour, Containing
 
     private int stardust;
 
-    public int stardustCollected
+    public int getStardustCollected()
     {
-        get
-        {
-            return stardust;
-        }
-        set
-        {
-            if(value >= 0)
-            {
-                stardust = value;
-            }
-        }
+        return stardust;
     }
 
-    public float glowIntensity
+    public float getGlowIntensity()
     {
-        get
+        if(stardust <= 0)
         {
-            if(stardustCollected <= 0)
-            {
-                return 0.1F;
-            }
-            return (stardustCollected + 1) / TOTAL_STARDUST;
+            return 0.5F;
+            //return Math.Min(0.1F, (1/TOTAL_STARDUST));
         }
+        return 2 * ((float) stardust / (float) TOTAL_STARDUST);
     }
 
     // Start is called before the first frame update
@@ -52,12 +41,12 @@ public class StardustContainer : MonoBehaviour, Containing
     }
 
     // Update is called once per frame
-    void OnTriggerEvent(Collider collision)
+    void OnTriggerEnter(Collider collision)
     {
         if(collision.gameObject.CompareTag("Stardust"))
         {
-            Destroy(gameObject);
-            stardustCollected += 1;
+            Destroy(collision.gameObject);
+            stardust += 1;
         }
     }
 }

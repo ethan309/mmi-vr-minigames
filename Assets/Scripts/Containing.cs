@@ -4,15 +4,9 @@ using UnityEngine;
 
 public interface Containing
 {
-    float glowIntensity
-    {
-        get;
-    }
-    int stardustCollected
-    {
-        get;
-    }
-
+    float getGlowIntensity();
+    int getStardustCollected();
+    
     int stardustToCollect
     {
         get;

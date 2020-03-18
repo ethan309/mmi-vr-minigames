@@ -57,7 +57,7 @@ public class HUDController : MonoBehaviour
 
     void Update()
     {
-        int collected = (container.GetComponent<Containing>()).stardustCollected;
+        int collected = (container.GetComponent<Containing>()).getStardustCollected();
         if(totalDust <= 0)
             totalDust = (container.GetComponent<Containing>()).stardustToCollect;
         String status = "Levels:\n" + collected + "/" + totalDust;

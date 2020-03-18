@@ -683,11 +683,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stardust Piece 2
       objectReference: {fileID: 0}
-    - target: {fileID: 7346821006289464440, guid: a8c87b1d146134f3e8c4b5cac4319c45,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     - target: {fileID: 7346821006289464447, guid: a8c87b1d146134f3e8c4b5cac4319c45,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -742,11 +737,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7346821006568247638, guid: a8c87b1d146134f3e8c4b5cac4319c45,
-        type: 3}
-      propertyPath: m_TagString
-      value: Stardust
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8c87b1d146134f3e8c4b5cac4319c45, type: 3}
@@ -805,7 +795,7 @@ GameObject:
   - component: {fileID: 1432629905}
   - component: {fileID: 1432629907}
   m_Layer: 0
-  m_Name: Debug Lighting
+  m_Name: Container Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -820,16 +810,16 @@ Light:
   m_GameObject: {fileID: 1432629904}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 2
+  m_Type: 0
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.96862745, b: 0.24705882, a: 1}
   m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
+  m_Range: 100
+  m_SpotAngle: 45
+  m_InnerSpotAngle: 1
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -862,15 +852,15 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
+  m_AreaSize: {x: 10, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
-  m_ShadowRadius: 0
+  m_ShadowRadius: 10
   m_ShadowAngle: 0
 --- !u!4 &1432629906
 Transform:
@@ -880,11 +870,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1432629904}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.97, y: 1.34, z: 4.32}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 1542813593}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1432629907
 MonoBehaviour:
@@ -909,7 +899,6 @@ GameObject:
   - component: {fileID: 1542813593}
   - component: {fileID: 1542813592}
   - component: {fileID: 1542813591}
-  - component: {fileID: 1542813590}
   - component: {fileID: 1542813589}
   - component: {fileID: 1542813588}
   - component: {fileID: 1542813587}
@@ -1044,19 +1033,6 @@ MonoBehaviour:
   highlightOnHover: 1
   hideHighlight: []
   hoverPriority: 0
---- !u!65 &1542813590
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1542813586}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1542813591
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1114,9 +1090,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.25, y: 1.0971645, z: 1.253}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
-  m_Children: []
+  m_Children:
+  - {fileID: 1432629906}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1542813594
 BoxCollider:
@@ -1333,7 +1310,7 @@ Transform:
   - {fileID: 1648887252}
   - {fileID: 1198465478}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1648887251
 PrefabInstance:
@@ -1342,15 +1319,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1565287180}
     m_Modifications:
+    - target: {fileID: 1648887254, guid: a8c87b1d146134f3e8c4b5cac4319c45, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7346821006289464440, guid: a8c87b1d146134f3e8c4b5cac4319c45,
         type: 3}
       propertyPath: m_Name
       value: Stardust Piece 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7346821006289464440, guid: a8c87b1d146134f3e8c4b5cac4319c45,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7346821006289464447, guid: a8c87b1d146134f3e8c4b5cac4319c45,
         type: 3}
@@ -1406,11 +1382,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7346821006568247638, guid: a8c87b1d146134f3e8c4b5cac4319c45,
-        type: 3}
-      propertyPath: m_TagString
-      value: Stardust
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8c87b1d146134f3e8c4b5cac4319c45, type: 3}

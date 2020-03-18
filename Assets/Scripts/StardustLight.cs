@@ -14,7 +14,7 @@ public class StardustLight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float newIntensity = (container.GetComponent<Containing>()).glowIntensity;
+        float newIntensity = (container.GetComponent<Containing>()).getGlowIntensity();
         GetComponent<Light>().intensity = newIntensity;
     }
 }

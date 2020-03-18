@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7346821006289464445}
   - component: {fileID: 7346821006289464446}
   - component: {fileID: 7346821006289464435}
-  - component: {fileID: 7346821006289464434}
+  - component: {fileID: 1648887254}
   m_Layer: 0
   m_Name: Stardust Piece
   m_TagString: Stardust
@@ -171,19 +171,19 @@ Halo:
     serializedVersion: 2
     rgba: 4281717733
   m_Size: 0.3
---- !u!114 &7346821006289464434
-MonoBehaviour:
+--- !u!135 &1648887254
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7346821006289464440}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bff7e098e27d2424c9b8bd8bf3d02723, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collected: 0
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7346821006568247638
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,7 +195,6 @@ GameObject:
   - component: {fileID: 7346821006568247637}
   - component: {fileID: 7346821006568247657}
   - component: {fileID: 7346821006568247658}
-  - component: {fileID: 7346821006568247659}
   m_Layer: 0
   m_Name: Star
   m_TagString: Untagged
@@ -264,19 +263,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &7346821006568247659
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7346821006568247638}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7346821006914032031
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,7 +273,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7346821006914032030}
   - component: {fileID: 7346821006914032029}
-  - component: {fileID: 7346821006914032028}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -370,16 +355,3 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &7346821006914032028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7346821006914032031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bff7e098e27d2424c9b8bd8bf3d02723, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collected: 0
