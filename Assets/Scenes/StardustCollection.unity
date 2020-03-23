@@ -607,10 +607,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2acb3c3becab74ffc9de0b2eb1241234, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HUDLeftText: {fileID: 0}
-  HUDCenterText: {fileID: 0}
-  HUDRightText: {fileID: 0}
-  HUDBottomText: {fileID: 0}
+  HUDLeftText: {fileID: 516223975}
+  HUDCenterText: {fileID: 1776003258}
+  HUDRightText: {fileID: 2048539182}
+  HUDBottomText: {fileID: 1546859004}
 --- !u!114 &1189631621
 MonoBehaviour:
   m_ObjectHideFlags: 0
