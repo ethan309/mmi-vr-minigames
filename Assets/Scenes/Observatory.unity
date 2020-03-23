@@ -5828,13 +5828,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1450214018}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2acb3c3becab74ffc9de0b2eb1241234, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b856133573e8485fa03a6cb6cef9977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HUDLeftText: {fileID: 677765967}
-  HUDCenterText: {fileID: 1715835153}
-  HUDRightText: {fileID: 854923904}
-  HUDBottomText: {fileID: 525907998}
+  HUDLeftText: {fileID: 0}
+  HUDCenterText: {fileID: 0}
+  HUDRightText: {fileID: 0}
+  HUDBottomText: {fileID: 0}
 --- !u!1 &1450450796
 GameObject:
   m_ObjectHideFlags: 0

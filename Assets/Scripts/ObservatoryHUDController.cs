@@ -7,11 +7,8 @@ using System.Linq;
 using UnityEngine.UI;
 using TMPro;
 
-public class HUDController : MonoBehaviour
+public class ObservatoryHUDController : MonoBehaviour
 {
-
-    private GameObject container;
-    private int totalDust;
     private System.Timers.Timer startTimer;
 
     public TextMeshProUGUI HUDLeftText;
@@ -22,14 +19,14 @@ public class HUDController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        container = GameObject.FindGameObjectsWithTag("Test Tube")[0];
-        totalDust = (container.GetComponent<Containing>()).stardustToCollect;
-        PopulateHUDText("", "Collect all the stardust.", "", "You can use this stardust to power your light.");
+        print("GO");
+        PopulateHUDText("", "Start by constructing your telescope.", "", "You will use your telescope to find other worlds.");
         StartTimer(5000, ClearHUDText);
     }
 
     private void PopulateHUDText(String left, String center, String right, String bottom)
     {
+        print("HUD");
         HUDLeftText.text = left;
         HUDCenterText.text = center;
         HUDRightText.text = right;
@@ -53,14 +50,5 @@ public class HUDController : MonoBehaviour
         startTimer.Elapsed += callback; //OnTimedEvent;
         startTimer.AutoReset = false;
         startTimer.Enabled = true;
-    }
-
-    void Update()
-    {
-        int collected = (container.GetComponent<Containing>()).getStardustCollected();
-        if(totalDust <= 0)
-            totalDust = (container.GetComponent<Containing>()).stardustToCollect;
-        String status = "Levels:\n" + collected + "/" + totalDust;
-        PopulateHUDText(status, "", "", "");
     }
 }
