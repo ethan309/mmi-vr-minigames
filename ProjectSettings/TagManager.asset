@@ -17,6 +17,8 @@ TagManager:
   - Lens
   - Test Tube
   - Stardust
+  - SkyboxCamera
+  - Player Size Adjustment Slider
   layers:
   - Default
   - TransparentFX
