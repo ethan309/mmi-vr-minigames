@@ -27,10 +27,10 @@ public class StardustContainer : MonoBehaviour, Containing
     {
         if(stardust <= 0)
         {
-            return 0.5F;
+            return 0.2F;
             //return Math.Min(0.1F, (1/TOTAL_STARDUST));
         }
-        return 2 * ((float) stardust / (float) TOTAL_STARDUST);
+        return 0.8f * ((float) stardust / (float) TOTAL_STARDUST);
     }
 
     // Start is called before the first frame update

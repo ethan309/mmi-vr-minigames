@@ -8,7 +8,7 @@ public class StardustLight : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        container = GameObject.FindGameObjectsWithTag("Test Tube")[0];
+        container = GameObject.FindGameObjectsWithTag("Stardust Container")[0];
     }
 
     // Update is called once per frame

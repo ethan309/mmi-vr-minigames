@@ -23,7 +23,7 @@ public class StardustHUDController : MonoBehaviour
     void Start()
     {
         blocked = true;
-        container = GameObject.FindGameObjectsWithTag("Test Tube")[0];
+        container = GameObject.FindGameObjectsWithTag("Stardust Container")[0];
         totalDust = (container.GetComponent<Containing>()).stardustToCollect;
         PopulateHUDText("", "Collect all the stardust.", "", "You can use this stardust to power your light.");
         StartTimer(5000, ClearHUDText);
