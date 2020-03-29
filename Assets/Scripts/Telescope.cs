@@ -26,7 +26,6 @@ public class Telescope : MonoBehaviour
             TelescopeComponentParent piece = component.GetComponent<TelescopeComponentParent>();
             if (piece != null)
             {
-                // TODO: make piece names uniform with boolean names
                 if (component.ToString() == "Eye Piece (UnityEngine.GameObject)") {
                     eyePiecePlaced = piece.placed;
                 } else if (component.ToString() == "Body (UnityEngine.GameObject)") {
