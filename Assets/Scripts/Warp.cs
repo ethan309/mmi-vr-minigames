@@ -20,7 +20,7 @@ public class Warp : MonoBehaviour
         raycaster = GameObject.Find("Telescope Raycaster");
     }
     
-    // Warp to minigame (new scene). 'W' key used for manual debugging.
+    // Warp to minigame (new scene). 'R' key used for manual debugging.
     void Update()
     {
         if (onlyObservatory) {
@@ -29,7 +29,7 @@ public class Warp : MonoBehaviour
             target = raycaster.GetComponent<TelescopeRaycaster>().warpTag;
         }
 
-        if(Input.GetKeyUp(KeyCode.W))
+        if(Input.GetKeyUp(KeyCode.R))
         {
             if(focus != null && focus != BASE)
             {
