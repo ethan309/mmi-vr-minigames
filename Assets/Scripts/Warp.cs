@@ -24,7 +24,7 @@ public class Warp : MonoBehaviour
     void Update()
     {
         if (onlyObservatory) {
-            target = "Observatory"
+            target = "Observatory";
         } else {
             target = raycaster.GetComponent<TelescopeRaycaster>().warpTag;
         }

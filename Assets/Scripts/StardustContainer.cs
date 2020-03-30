@@ -27,8 +27,7 @@ public class StardustContainer : MonoBehaviour, Containing
     {
         if(stardust <= 0)
         {
-            return 1.0F;
-            //return Math.Min(0.1F, (1/TOTAL_STARDUST));
+            return 8.0f * ((float) 1 / (float) TOTAL_STARDUST);
         }
         return 10.0f * ((float) stardust / (float) TOTAL_STARDUST);
     }
