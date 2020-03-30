@@ -14,18 +14,15 @@ public class TelescopeRaycaster : MonoBehaviour
         Vector3 forward = transform.TransformDirection(Vector3.forward) * 10;
         Ray intoSkyRay = new Ray(transform.position, forward);
         
-        // Debug.DrawRay(transform.position, forward, Color.red);
-        Debug.DrawRay(intoSkyRay.origin, intoSkyRay.direction, Color.green);
-
+        // Use this to see the ray drawn into the Scene view when the game is running
+        // Debug.DrawRay(intoSkyRay.origin, intoSkyRay.direction * 1000, Color.green);
 
         if (Physics.Raycast(intoSkyRay, out hit, 1000))
         {
-            // print("casting");
-            // print(hit.collider.tag);
             if (hit.collider.tag == "Stardust Warp")
             {
                 // run warp code
-                print("test");
+                // ...
             }
         }
     }
