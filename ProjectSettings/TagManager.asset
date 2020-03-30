@@ -20,7 +20,7 @@ TagManager:
   - SkyboxCamera
   - Player Size Adjustment Slider
   - Stardust Container
-  - Stardust Warp
+  - StardustCollection
   layers:
   - Default
   - TransparentFX

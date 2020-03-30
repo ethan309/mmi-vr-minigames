@@ -4768,7 +4768,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f6e8a58e6a044bc9b6b4ce46d76aa33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ray: {fileID: 0}
+  selection: {fileID: 0}
+  halo: {fileID: 0}
 --- !u!65 &992722396
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5084,9 +5085,10 @@ GameObject:
   - component: {fileID: 1113755035}
   - component: {fileID: 1113755034}
   - component: {fileID: 1113755033}
+  - component: {fileID: 1113755037}
   m_Layer: 0
-  m_Name: Sphere
-  m_TagString: Stardust Warp
+  m_Name: TemporaryStardustWarp
+  m_TagString: StardustCollection
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5166,6 +5168,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!122 &1113755037
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113755032}
+  m_Enabled: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4282038783
+  m_Size: 3
 --- !u!1001 &1115616986
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9993,7 +10007,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: d7779b9bf51be4b3094693e27737684e,
         type: 3}
       propertyPath: m_TagString
-      value: Stardust Warp
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: d7779b9bf51be4b3094693e27737684e,
         type: 3}
