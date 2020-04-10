@@ -9,6 +9,7 @@ public class StardustLight : MonoBehaviour
     void Start()
     {
         container = GameObject.FindGameObjectsWithTag("Stardust Container")[0];
+        GetComponent<Light>().range = 5;
     }
 
     // Update is called once per frame
@@ -16,5 +17,6 @@ public class StardustLight : MonoBehaviour
     {
         float newIntensity = (container.GetComponent<Containing>()).getGlowIntensity();
         GetComponent<Light>().intensity = newIntensity;
+        if (newIntensity > 0.1) GetComponent<Light>().range = 5 + (newIntensity * 2);
     }
 }
