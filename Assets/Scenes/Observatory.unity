@@ -6497,9 +6497,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HUDLeftText: {fileID: 0}
-  HUDCenterText: {fileID: 0}
+  HUDCenterText: {fileID: 1715835153}
   HUDRightText: {fileID: 0}
-  HUDBottomText: {fileID: 0}
+  HUDBottomText: {fileID: 525907998}
 --- !u!1 &1450450796
 GameObject:
   m_ObjectHideFlags: 0
