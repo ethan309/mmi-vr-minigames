@@ -6496,9 +6496,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b856133573e8485fa03a6cb6cef9977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HUDLeftText: {fileID: 0}
+  HUDLeftText: {fileID: 677765967}
   HUDCenterText: {fileID: 1715835153}
-  HUDRightText: {fileID: 0}
+  HUDRightText: {fileID: 854923904}
   HUDBottomText: {fileID: 525907998}
 --- !u!1 &1450450796
 GameObject:
