@@ -41,8 +41,9 @@ public class Flicker : MonoBehaviour
         while (source.range <= maxRange)
         {
             source.range += 0.5f;
-            yield return source;
+            yield return new WaitForSeconds(0.25f);
         }
+        yield return source;
     }
 
     IEnumerator DecreaseRange(Light source)
@@ -50,7 +51,8 @@ public class Flicker : MonoBehaviour
         while (source.range >= minRange)
         {
             source.range -= 0.5f;
-            yield return source;
+            yield return new WaitForSeconds(0.25f);
         }
+        yield return source;
     }
 }
