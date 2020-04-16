@@ -4,55 +4,31 @@ using UnityEngine;
 
 public class Flicker : MonoBehaviour
 {
-    public float maxRange;
-    public float minRange;
+    private float MAX_INTENSITY = 5.0f;
+    private float MIN_INTENSITY = 1.25f;
+    private float DELTA = 0.05f;
 
     private Light lightSource;
 
     void Start()
     {
-        minRange = 1.0f;
-        maxRange = 5.0f;
         lightSource = GetComponent<Light>();
+        StartCoroutine(UpdateStardustGlowIntensity(lightSource));
     }
 
-    void Update()
+    IEnumerator UpdateStardustGlowIntensity(Light source)
     {
-        if (lightSource.range >= maxRange) StartCoroutine(DecreaseRange(lightSource));
-        else if (lightSource.range <= minRange) StartCoroutine(IncreaseRange(lightSource));
-    }
-
-    // IEnumerator DoFlicker()
-    // {
-    //     if (lightSource.range <= minRange)
-    //     {
-    //         yield return StartCoroutine(IncreaseRange(lightSource));
-    //     }
-
-    //     if (lightSource.range >= maxRange) 
-    //     {
-    //         yield return StartCoroutine(DecreaseRange(lightSource));
-    //     }
-    //     print(lightSource.range);
-    // }
-
-    IEnumerator IncreaseRange(Light source)
-    {
-        while (source.range <= maxRange)
+        float delta = 0.05f;
+        while(true)
         {
-            source.range += 0.5f;
-            yield return new WaitForSeconds(0.25f);
-        }
-        yield return source;
-    }
+            if(source.range > MAX_INTENSITY)
+                delta = -DELTA;
+            else if(source.range < MIN_INTENSITY)
+                delta = DELTA;
 
-    IEnumerator DecreaseRange(Light source)
-    {
-        while (source.range >= minRange)
-        {
-            source.range -= 0.5f;
-            yield return new WaitForSeconds(0.25f);
+            source.range += delta;
+            
+            yield return new WaitForSeconds(0.01f);
         }
-        yield return source;
     }
 }
