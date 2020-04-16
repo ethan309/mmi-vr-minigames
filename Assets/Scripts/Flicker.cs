@@ -7,6 +7,7 @@ public class Flicker : MonoBehaviour
     private float MAX_INTENSITY = 5.0f;
     private float MIN_INTENSITY = 1.25f;
     private float DELTA = 0.05f;
+    private float LIGHTING_CHANGE_DELAY = 0.01f;
 
     private Light lightSource;
 
@@ -18,7 +19,7 @@ public class Flicker : MonoBehaviour
 
     IEnumerator UpdateStardustGlowIntensity(Light source)
     {
-        float delta = 0.05f;
+        float delta = DELTA;
         while(true)
         {
             if(source.range > MAX_INTENSITY)
@@ -28,7 +29,7 @@ public class Flicker : MonoBehaviour
 
             source.range += delta;
             
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForSeconds(LIGHTING_CHANGE_DELAY);
         }
     }
 }
