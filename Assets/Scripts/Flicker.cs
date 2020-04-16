@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Flicker : MonoBehaviour
 {
-    private float MAX_INTENSITY = 5.0f;
-    private float MIN_INTENSITY = 1.25f;
-    private float DELTA = 0.05f;
-    private float LIGHTING_CHANGE_DELAY = 0.01f;
+    private const float MAX_INTENSITY = 5.0f;
+    private const float MIN_INTENSITY = 1.25f;
+    private const float DELTA = 0.05f;
+    private const float LIGHTING_CHANGE_DELAY = 0.01f;
 
     private Light lightSource;
 
