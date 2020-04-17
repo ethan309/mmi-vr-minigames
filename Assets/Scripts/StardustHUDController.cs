@@ -39,10 +39,7 @@ public class StardustHUDController : MonoBehaviour
 
     private void ClearHUDText(System.Object source, ElapsedEventArgs e)
     {
-        HUDLeftText.text = "";
-        HUDCenterText.text = "";
-        HUDRightText.text = "";
-        HUDBottomText.text = "";
+        PopulateHUDText("", "", "", "");
         blocked = false;
     }
 
