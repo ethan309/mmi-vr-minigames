@@ -7,15 +7,13 @@ public class VerticalPacer : MonoBehaviour
     private float minHeight;
     private float maxHeight;
     private const float POSITON_CHANGE_DELAY = 0.01f;
-    private const float DELTA = 0.04f;
+    private float DELTA;
     // Start is called before the first frame update
     void Start()
     {
-        // print("Current position: " + transform.position.y);
+        DELTA = Random.Range(0.03f, 0.08f);
         minHeight = transform.position.y;
         maxHeight = transform.position.y + range;
-        // print("Min Height: " + minHeight);
-        // print("Max Height: " + maxHeight);
         StartCoroutine(UpdateVerticalPosition());
     }
     IEnumerator UpdateVerticalPosition()
