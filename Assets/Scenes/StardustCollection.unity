@@ -10476,6 +10476,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1077631626}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1077631628 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 429506, guid: dc06161b6d97feb419f45f03b62e14b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1077631626}
+  m_PrefabAsset: {fileID: 0}
 --- !u!20 &1077631629 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 2014920, guid: dc06161b6d97feb419f45f03b62e14b9,
@@ -11182,8 +11188,8 @@ RectTransform:
   - {fileID: 1546859003}
   - {fileID: 516223974}
   - {fileID: 2048539181}
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 1077631628}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

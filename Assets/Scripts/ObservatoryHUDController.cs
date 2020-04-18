@@ -20,7 +20,7 @@ public class ObservatoryHUDController : MonoBehaviour
     void Start()
     {
         PopulateHUDText("", "Start by constructing your telescope.", "", "You will use your telescope to find other worlds.");
-        StartTimer(5000, ClearHUDText);
+        StartTimer(10000, ClearHUDText);
     }
 
     private void PopulateHUDText(String left, String center, String right, String bottom)

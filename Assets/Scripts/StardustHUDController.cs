@@ -26,7 +26,7 @@ public class StardustHUDController : MonoBehaviour
         container = GameObject.FindGameObjectsWithTag("Stardust Container")[0];
         totalDust = (container.GetComponent<Containing>()).stardustToCollect;
         PopulateHUDText("", "Collect all the stardust.", "", "You can use this stardust to power your light.");
-        StartTimer(5000, ClearHUDText);
+        StartTimer(10000, ClearHUDText);
     }
 
     private void PopulateHUDText(String left, String center, String right, String bottom)
