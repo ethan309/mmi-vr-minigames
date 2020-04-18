@@ -72,6 +72,10 @@ public class RotateCrank : MonoBehaviour
         float calculatedOldRotation = (oldCycles * 360) + oldRotation;
         float calculatedChangeInRotation = calculatedRotation - calculatedOldRotation;
         targetRotatable.transform.Rotate(0, calculatedChangeInRotation / rotationScale, 0);
+        RotateSkybox();
+    }
 
+    void RotateSkybox() {
+        RenderSettings.skybox.SetFloat("_Rotation", targetRotatable.transform.rotation.eulerAngles[axisOfRotation]);
     }
 }
