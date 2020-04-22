@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Valve.VR;
+using Valve.VR.InteractionSystem;
 
 public class Warp : MonoBehaviour
 {
+    public SteamVR_Action_Boolean gripAction = SteamVR_Input.GetAction<SteamVR_Action_Boolean>("default", "GrabGrip");
     public string target;
     public bool onlyObservatory;
 
@@ -27,7 +29,9 @@ public class Warp : MonoBehaviour
             target = raycaster.GetComponent<TelescopeRaycaster>().warpTag;
         }
 
-        if(Input.GetKeyUp(KeyCode.R))
+        // PRODUCTION TRIGGER (controller grip press) or DEBUG TRIGGER ('R' keypress).
+        bool shouldWarp = gripAction.state || Input.GetKeyUp(KeyCode.R);
+        if(shouldWarp)
         {
             if(target != null && target != BASE)
             {
