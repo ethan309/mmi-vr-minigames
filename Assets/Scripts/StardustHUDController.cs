@@ -75,7 +75,7 @@ public class StardustHUDController : MonoBehaviour
             else
             {
                 HUDCenterText.color = new Color32(250, 255, 250, 255);  // white
-                infoText = "Stardust capacity met successfully.";
+                infoText = "Stardust capacity met successfully.\nReturn to Observatory.";
             }
             PopulateHUDText("", status + "\n" + percentage + "% capacity", "", infoText);
         }
