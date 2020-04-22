@@ -10,13 +10,11 @@ public class Warp : MonoBehaviour
     public bool onlyObservatory;
 
     string BASE;
-    string focus;
     private GameObject raycaster;
 
     void Start()
     {
         BASE = SceneManager.GetActiveScene().name;
-        focus = BASE;
         raycaster = GameObject.Find("Telescope Raycaster");
     }
     
@@ -24,28 +22,28 @@ public class Warp : MonoBehaviour
     void Update()
     {
         if (onlyObservatory) {
-            target = "Observatory";
+            target = BASE;
         } else {
             target = raycaster.GetComponent<TelescopeRaycaster>().warpTag;
         }
 
         if(Input.GetKeyUp(KeyCode.R))
         {
-            if(focus != null && focus != BASE)
+            if(target != null && target != BASE)
             {
                 // minigame selected.
-                print("Loading scene: " + focus);
-                Valve.VR.SteamVR_LoadLevel.Begin(focus);
+                print("Loading scene: " + target);
+                Valve.VR.SteamVR_LoadLevel.Begin(target);
             }
-            else if(focus == BASE)
+            else if(target == BASE)
             {
                 // return to observatory.
-                print("Exiting telescope view.");
+                print("Exiting telescope view (in scene: " + target + ").");
             }
             else
             {
                 // Play error sound, etc.
-                print("Invalid telescope selction.");
+                print("Invalid telescope selection.");
             }
         }
     }
