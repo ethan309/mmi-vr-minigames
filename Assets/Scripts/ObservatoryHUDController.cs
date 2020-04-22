@@ -10,6 +10,7 @@ using TMPro;
 public class ObservatoryHUDController : MonoBehaviour
 {
     private System.Timers.Timer startTimer;
+    private bool blocked;
 
     public TextMeshProUGUI HUDLeftText;
     public TextMeshProUGUI HUDCenterText;
@@ -19,6 +20,7 @@ public class ObservatoryHUDController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        blocked = true;
         PopulateHUDText("", "Start by constructing your telescope.", "", "You will use your telescope to find other worlds.");
         StartTimer(10000, ClearHUDText);
     }
@@ -33,10 +35,8 @@ public class ObservatoryHUDController : MonoBehaviour
 
     private void ClearHUDText(System.Object source, ElapsedEventArgs e)
     {
-        HUDLeftText.text = "";
-        HUDCenterText.text = "";
-        HUDRightText.text = "";
-        HUDBottomText.text = "";
+        PopulateHUDText("", "", "", "");
+        blocked = false;
     }
 
 
@@ -48,5 +48,13 @@ public class ObservatoryHUDController : MonoBehaviour
         startTimer.Elapsed += callback; //OnTimedEvent;
         startTimer.AutoReset = false;
         startTimer.Enabled = true;
+    }
+
+    void Update()
+    {
+        if(!blocked)
+        {
+            // Update HUD
+        }
     }
 }
