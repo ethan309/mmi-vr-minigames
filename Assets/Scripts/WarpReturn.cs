@@ -17,7 +17,10 @@ public class WarpReturn : MonoBehaviour
     void Start()
     {
         canWarp = false;
-        playerView = GameObject.Find("HUD View").GetComponent<HUD>();
+        GameObject view = GameObject.Find("HUD View"); // .FindGameObjectWithTag("HUD");
+        print("View: " + view);
+        playerView = view.GetComponent<StardustHUDController>();
+        print("HUD: " + playerView);
     }
 
     private void StartTimer(int time, ElapsedEventHandler callback)
@@ -44,11 +47,13 @@ public class WarpReturn : MonoBehaviour
             }
             else
             {
+                print("Cannot load scene: " + target);
                 const int timeToConfirm = 10000;
                 // Push warning to HUD: 
-                playerView.PushHUDText("", "Are you sure you want to return home?", "", "Press teleport button(s) again to confirm.", timeToConfirm);
+                bool success = playerView.PushHUDText("", "Are you sure you want to return home?", "", "Press teleport button(s) again to confirm.", timeToConfirm);
+                print("Attempt to push confirmation message worked? -> " + success);
                 canWarp = true;
-                StartTimer(timeToConfirm, (System.Object source, ElapsedEventArgs e) => canWarp = false);
+                StartTimer(timeToConfirm, (System.Object source, ElapsedEventArgs e) => { canWarp = false; print("canWarp = false"); });
             }
         }
     }

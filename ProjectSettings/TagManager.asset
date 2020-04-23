@@ -21,6 +21,7 @@ TagManager:
   - Player Size Adjustment Slider
   - Stardust Container
   - StardustCollection
+  - HUD
   layers:
   - Default
   - TransparentFX
