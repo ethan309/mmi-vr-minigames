@@ -13457,14 +13457,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1473514458}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7079d2065d6c408fa8c3e50aed84208, type: 3}
+  m_Script: {fileID: 11500000, guid: 519dd63d0c82b4fe389491debd7ed656, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gripAction:
     actionPath: /actions/default/in/GrabGrip
     needsReinit: 0
   canWarp: 0
-  target: 
 --- !u!1 &1478538668 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: acfebb05c58964874891f8ab53764647,
