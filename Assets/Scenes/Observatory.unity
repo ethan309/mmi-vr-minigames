@@ -1663,7 +1663,12 @@ MonoBehaviour:
     You will need to find three
     pieces.
 
-    You will use your telescope to travel to other worlds.'
+    You will use your telescope to travel to other worlds.
+
+
+    Once
+    your telescope is complete, use the cranks to aim at plants and the inner grip
+    buttons to choose a location.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1708,7 +1713,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 121
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1732,12 +1737,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 321064707}
-    characterCount: 128
+    characterCount: 243
     spriteCount: 0
-    spaceCount: 21
-    wordCount: 22
+    spaceCount: 43
+    wordCount: 43
     linkCount: 0
-    lineCount: 3
+    lineCount: 8
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -1779,8 +1784,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 32}
-  m_SizeDelta: {x: 350, y: 50}
+  m_AnchoredPosition: {x: 0, y: 20}
+  m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &327575249
 PrefabInstance:
@@ -5161,7 +5166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5613243e699c34046bcf679855532f68, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.1660482
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5613243e699c34046bcf679855532f68, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9251,8 +9256,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7079d2065d6c408fa8c3e50aed84208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gripAction:
+    actionPath: /actions/default/in/GrabGrip
+    needsReinit: 0
+  canWarp: 0
   target: 
-  onlyObservatory: 0
 --- !u!1 &1816698508 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: fade7d8b155c9e347935a5505346523d,
