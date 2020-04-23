@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TelescopeComponentParent : MonoBehaviour
+public class TelescopeComponentParent : MonoBehaviour, Placeable
 {
     public bool placed = false;
     public string tag;
+
+    public bool isPlaced()
+    {
+        return placed;
+    }
 
     void OnTriggerEnter(Collider other)
     {
