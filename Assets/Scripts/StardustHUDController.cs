@@ -7,7 +7,7 @@ using System.Linq;
 using UnityEngine.UI;
 using TMPro;
 
-public class StardustHUDController : MonoBehaviour
+public class StardustHUDController : MonoBehaviour, HUD
 {
     private bool blocked = false;
     private GameObject container;
@@ -35,6 +35,18 @@ public class StardustHUDController : MonoBehaviour
         HUDCenterText.text = center;
         HUDRightText.text = right;
         HUDBottomText.text = bottom;
+    }
+
+    public bool PushHUDText(String left, String center, String right, String bottom, int duration)
+    {
+        if(blocked)
+        {
+            return false;
+        }
+        PopulateHUDText(left, center, right, bottom);
+        blocked = true;
+        StartTimer(duration, ClearHUDText);
+        return true;
     }
 
     private void ClearHUDText(System.Object source, ElapsedEventArgs e)
