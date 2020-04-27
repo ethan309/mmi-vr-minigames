@@ -9,7 +9,7 @@ using TMPro;
 
 public class StardustHUDController : MonoBehaviour, HUD
 {
-    private bool blocked = false;
+    private bool blocked;
     private GameObject container;
     private int totalDust;
     private System.Timers.Timer startTimer;
@@ -22,11 +22,10 @@ public class StardustHUDController : MonoBehaviour, HUD
     // Start is called before the first frame update
     void Start()
     {
-        blocked = true;
+        blocked = false;
         container = GameObject.FindGameObjectsWithTag("Stardust Container")[0];
         totalDust = (container.GetComponent<Containing>()).stardustToCollect;
-        PopulateHUDText("", "Collect all the stardust.", "", "You can use this stardust to power your light.");
-        StartTimer(10000, ClearHUDText);
+        PushHUDText("", "Collect all the stardust.", "", "You can use this stardust to power your light.", 10000);
     }
 
     private void PopulateHUDText(String left, String center, String right, String bottom)
