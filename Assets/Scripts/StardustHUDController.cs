@@ -73,7 +73,7 @@ public class StardustHUDController : MonoBehaviour, HUD
             if(totalDust <= 0)
                 totalDust = (container.GetComponent<Containing>()).stardustToCollect;
             String status = "Levels: " + collected + "/" + totalDust;
-            double percentage = Math.Round(((float) collected / (float) totalDust), 2);
+            double percentage = 100.0 * Math.Round(((float) collected / (float) totalDust), 2);
             String infoText = "";
             if(percentage <= 25)
                 HUDCenterText.color = new Color32(250, 10, 10, 255);  // red
@@ -89,6 +89,10 @@ public class StardustHUDController : MonoBehaviour, HUD
                 infoText = "Stardust capacity met successfully.\nReturn to Observatory.";
             }
             PopulateHUDText("", status + "\n" + percentage + "% capacity", "", infoText);
+        }
+        else
+        {
+            HUDCenterText.color = new Color32(250, 255, 250, 255);  // default to white text
         }
     }
 }

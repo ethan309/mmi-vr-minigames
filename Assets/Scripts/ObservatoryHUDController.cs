@@ -7,7 +7,7 @@ using System.Linq;
 using UnityEngine.UI;
 using TMPro;
 
-public class ObservatoryHUDController : MonoBehaviour
+public class ObservatoryHUDController : MonoBehaviour, HUD
 {
     private System.Timers.Timer startTimer;
     private bool blocked;
@@ -20,9 +20,20 @@ public class ObservatoryHUDController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        blocked = false;
+        PushHUDText("", "Start by constructing your telescope.", "", "You will use your telescope to find other worlds.", 10000);
+    }
+
+    public bool PushHUDText(String left, String center, String right, String bottom, int duration)
+    {
+        if(blocked)
+        {
+            return false;
+        }
+        PopulateHUDText(left, center, right, bottom);
         blocked = true;
-        PopulateHUDText("", "Start by constructing your telescope.", "", "You will use your telescope to find other worlds.");
-        StartTimer(10000, ClearHUDText);
+        StartTimer(duration, ClearHUDText);
+        return true;
     }
 
     private void PopulateHUDText(String left, String center, String right, String bottom)
@@ -50,11 +61,11 @@ public class ObservatoryHUDController : MonoBehaviour
         startTimer.Enabled = true;
     }
 
-    void Update()
-    {
-        if(!blocked)
-        {
-            // Update HUD
-        }
-    }
+    // void Update()
+    // {
+    //     if(!blocked)
+    //     {
+    //         // Update HUD
+    //     }
+    // }
 }

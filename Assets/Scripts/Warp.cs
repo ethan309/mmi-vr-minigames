@@ -13,6 +13,7 @@ public class Warp : MonoBehaviour
     public string target; // telescope is pointed at...
     private string BASE;
     private GameObject raycaster;
+    private HUD playerView;
     private GameObject[] telescopeComponents;
     void Start()
     {
@@ -24,6 +25,8 @@ public class Warp : MonoBehaviour
         canWarp = false;
         BASE = SceneManager.GetActiveScene().name;
         raycaster = GameObject.Find("Telescope Raycaster");
+        GameObject view = GameObject.Find("HUD View"); // .FindGameObjectWithTag("HUD");
+        playerView = view.GetComponent<HUD>();
     }
 
     bool IsTelescopeComplete() {
@@ -42,17 +45,20 @@ public class Warp : MonoBehaviour
             bool sceneSelected = target != null && target != BASE;
             bool canWarp = IsTelescopeComplete();
             if(canWarp && sceneSelected) // minigame selected and telescope built
-            { 
+            {
+                playerView.PushHUDText("", "Warping", "", "", 2500);
                 print("Loading scene: " + target);
                 Valve.VR.SteamVR_LoadLevel.Begin(target);
             }
-            else if(target == BASE) // return to observatory.
+            else if(canWarp) // return to observatory.
             {
-                print("Exiting telescope view (in scene: " + target + ").");
+                playerView.PushHUDText("", "You must aim your telescope beforre you warp.", "", "Aim at the planet you woould like to which you want to travel.", 5000);
+               // print("Invalid telescope selection.");
             }
             else // Play error sound, etc.
             {
-                print("Invalid telescope selection.");
+                playerView.PushHUDText("", "You cannot warp to other worlds.", "", "You must complete your telescope first.", 5000);
+                //print("Telescope not complet.");
             }
         }
     }
