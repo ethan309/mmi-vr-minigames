@@ -17,6 +17,6 @@ public class StardustLight : MonoBehaviour
     {
         float newIntensity = (container.GetComponent<Containing>()).getGlowIntensity();
         GetComponent<Light>().intensity = newIntensity;
-        if (newIntensity > 0.1) GetComponent<Light>().range = 5 + (newIntensity * 5);
+        if (newIntensity > 0.1) GetComponent<Light>().range = 5 + (newIntensity * 7);
     }
 }
